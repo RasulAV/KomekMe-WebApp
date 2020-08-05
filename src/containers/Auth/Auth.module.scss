@@ -1,0 +1,12 @@
+@import '../../settings';
+
+.Link {
+    color: $color-main !important;
+    font-weight: bolder;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.Link:focus{
+    outline: none !important;
+}

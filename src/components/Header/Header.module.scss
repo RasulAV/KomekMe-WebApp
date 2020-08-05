@@ -1,0 +1,12 @@
+@import '../../settings';
+
+.navbar{
+    background-color: $color-main;
+}
+
+.navLink{
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-align: center;
+}
