@@ -11,14 +11,13 @@ import {
 } from "mdbreact";
 import { withRouter } from 'react-router-dom';
 
-
 import Logo from '../Logos/MainLogo/MainLogo';
 import classes from "./Header.module.css";
 
 const Header = (props) => {
   const activePage = props.location.pathname;
 
-  let navItemRight = (
+  let loginLogout = (
     <MDBNavItem title="Login" active={activePage === '/auth' ? true : false}>
       <MDBNavLink className={classes.navLink} to="/auth">
         <MDBIcon icon="sign-in-alt" className="mt-3 mt-md-2" />
@@ -27,7 +26,7 @@ const Header = (props) => {
   )
 
   if (props.isAuth) {
-    navItemRight = (
+    loginLogout = (
       <MDBNavItem title="Logout">
         <MDBNavLink className={classes.navLink} to="/logout">
           <MDBIcon icon="sign-out-alt" className="mt-3 mt-md-2" />
@@ -43,7 +42,6 @@ const Header = (props) => {
       </MDBNavbarBrand>
       <MDBNavbarToggler onClick={props.toggleCollapse} />
       <MDBCollapse id="navbarCollapse3" isOpen={props.isOpen} navbar>
-
         <MDBNavbarNav left>
           <MDBNavItem active={activePage === '/' ? true : false}>
             <MDBNavLink className={classes.navLink} to="/" exact>Home</MDBNavLink>
@@ -55,11 +53,10 @@ const Header = (props) => {
         </MDBNavbarNav>
 
         <MDBNavbarNav right>
-          {navItemRight}
+          {loginLogout}
         </MDBNavbarNav>
-
       </MDBCollapse>
-    </MDBNavbar>
+    </MDBNavbar >
   );
 }
 

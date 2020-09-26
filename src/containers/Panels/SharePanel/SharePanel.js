@@ -13,6 +13,8 @@ import copy from "copy-to-clipboard";
 import classes from './SharePanel.module.css';
 
 import qshpLogo from '../../../assets/images/logo_qshp.svg';
+import qaStandartLogo from '../../../assets/images/logo_qP_standart.svg';
+
 import Logo from '../../../components/Logos/QPLogo/QPLogo';
 import Modal from '../../../components/UI/Modal/Modal';
 import Button from '../../../components/UI/Button/Button';
@@ -29,7 +31,7 @@ class quickPanels extends Component {
     }
 
     componentDidMount() {
-        //console.log('quickShare Panel rendered');
+        ('Render: share Panel');
     }
 
     modalToogleHandler = () => () => {
@@ -47,13 +49,13 @@ class quickPanels extends Component {
 
     copyLinkToClipboardHandler = () => {
         copy(this.state.downloadLink);
-        
+
         this.setState({
             buttonVisible: false,
             showNotification: true
         });
 
-        setTimeout(()=>{
+        setTimeout(() => {
             this.setState({
                 showNotification: false
             })
@@ -68,14 +70,26 @@ class quickPanels extends Component {
                 title="Quick Share Panel"
                 body="Drop here a file and copy link to share it with another person - It this simple!"
             />);
-        
+        const button = (
+            <Button
+                className={classes.Button}
+                style={this.state.buttonVisible ? { display: "block" } : { display: "none" }}
+                clicked={this.copyLinkToClipboardHandler}
+            >
+                <MDBIcon
+                    icon="link"
+                    className="mr-1"
+                />Copy Link
+            </Button>
+        )
+
         let notification = null;
 
         if (this.state.showNotification) {
             notification = <Notification
                 icon="text-success"
                 title="Share Panel"
-                message={`Link ${this.state.downloadLink} Copied to Clipboard`}
+                message={"Link Copied to Clipboard"}
             />;
         }
 
@@ -91,19 +105,28 @@ class quickPanels extends Component {
                             onClick={this.modalToogleHandler()}
                             style={{ cursor: "pointer" }}
                         />
-                        <Logo height={'35px'} logo={qshpLogo} title="Share" />
+                        <Logo height={'35px'} logo={qshpLogo} title="Share Your Files" />
+                        <hr />
                     </MDBCardTitle>
 
-                    <MDBBox style={{ height: "85%" }} display="flex" justifyContent="center">
+                    <MDBBox >
                         <ReactFilestack
                             apikey={'AP5PsQ04RRWVqLNRV3FFQz'}
                             onSuccess={(res) => {
                                 //console.log(res.filesUploaded[0]['url']);
                                 this.fileDownloadLinkShowHandler(res.filesUploaded[0]['url']);
                             }}
-                            componentDisplayMode={{
-                                type: 'immediate'
-                            }}
+                            customRender={({ onPick }) => (
+                                <Button 
+                                    className={`mb-2 ${classes.Button}`}
+                                    clicked={onPick}>
+                                    <MDBIcon
+                                        icon="download"
+                                        className="mr-1"
+                                    />
+                                    Click here to open picker
+                                </Button>
+                            )}
                             actionOptions={{
                                 displayMode: "dropPane",
                                 container: "embedded"
@@ -111,17 +134,13 @@ class quickPanels extends Component {
                         />
                         <div id={'embedded'}></div>
                     </MDBBox>
-                    <Button
-                        className={classes.Button}
-                        style={this.state.buttonVisible ? { display: "block" } : { display: "none" }}
-                        clicked={this.copyLinkToClipboardHandler}
-                    >
-                        <MDBIcon
-                            icon="download"
-                            className="mr-1"
-                        />
-                            Copy Link to Clipboard
-                    </Button>
+
+                    {button}
+                    <hr />
+                    <Logo
+                        height={'15px'}
+                        logo={qaStandartLogo}
+                        logoStyle={{ width: "100%", textAlign: "center" }} />
                 </MDBCardBody>
             </MDBCard>
         )

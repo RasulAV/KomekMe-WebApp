@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import currentDevice from "current-device";
 
 import Layout from './hoc/Layout/Layout';
 import MainRoom from './containers/MainRoom/MainRoom';
@@ -11,6 +12,12 @@ import Logout from './containers/Auth/Logout/Logout';
 import * as actions from './store/actions/index';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.props.onSetDeviceOs(currentDevice.os);
+  }
+
   componentDidMount() {
     this.props.onTryAutoSignup();
   }
@@ -37,12 +44,9 @@ class App extends Component {
       );
     }
 
-
     return (
       <Layout>
-        <Switch>
-          {routes}
-        </Switch>
+        {routes}
       </Layout>
     )
   };
@@ -55,7 +59,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onTryAutoSignup: () => dispatch(actions.authCheckState())
+    onTryAutoSignup: () => dispatch(actions.authCheckState()),
+    onSetDeviceOs: (deviceOS) => dispatch(actions.setDeviceOs(deviceOS))
   };
 };
 

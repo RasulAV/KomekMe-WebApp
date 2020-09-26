@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
-    MDBCard, 
-    MDBCardBody, 
-    MDBCardTitle, 
-    MDBCardText, 
+    MDBCard,
+    MDBCardBody,
+    MDBCardTitle,
+    MDBCardText,
     MDBCardFooter,
     MDBContainer,
     MDBBox
@@ -16,16 +16,16 @@ class AboutRoom extends Component {
         return (
             <MDBContainer>
                 <MDBBox display="flex" justifyContent="center">
-                    <MDBCard  style={{ width: "22rem", marginTop: "3rem" }} className="text-center">
+                    <MDBCard style={{ width: "22rem", marginTop: "3rem" }} className="text-center">
                         <MDBCardBody>
                             <MDBCardTitle>KomekMe™- Web App</MDBCardTitle>
                             <MDBCardText>
                                 It is a set of useful tools collected in compact panels by types and categories,
-                            everything you need is at your fingertips.
+                                everything you need is at your fingertips.
                             </MDBCardText>
                         </MDBCardBody>
                         <MDBCardFooter className={classes.CardFooter} color="none">
-                            <small>&copy;KomekMe Company. <br/>Baku, 2020.</small>
+                            <small>&copy;KomekMe Company. <br />Baku, 2020.</small>
                         </MDBCardFooter>
                     </MDBCard>
                 </MDBBox>

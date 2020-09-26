@@ -23,9 +23,51 @@ export const fetchApplicationsFailed = (panelType) => {
     };
 };
 
-export const initQuickPanel = (panelType) => {
+export const setFilterStatus = (filtered) => {
+    return {
+        type: "QPA_FILTERED",
+        filtered: filtered
+    };
+}
+
+export const checkDeviceOsType = (deviceOs) => {
+    switch (deviceOs) {
+        case "ios": return "ios.json";
+        case "windows": return "windows.json";
+        case "android": return "android.json";
+        case "macos": return "macos.json";
+        default: return "windows.json";
+    }
+}
+
+export const checkPanelType = (panelType) => {
+    switch (panelType) {
+        case "app": return "QuickAppPanel/";
+        case "support": return "QuickSupportPanel/";
+        default: return "QuickAppPanel/";
+    }
+}
+
+export const initQuickPanel = (panelType, deviceOs, enteredFilter) => {
     return dispatch => {
-        let url = (panelType === 'app') ? '/Panels/QuickAppPanel.json' : '/Panels/QuickSupportPanel.json';
+
+        let url = '/panels/';
+        url += checkPanelType(panelType);
+        url += checkDeviceOsType(deviceOs);
+
+        if (typeof enteredFilter !== 'undefined') {
+            enteredFilter = enteredFilter.replace(/\s/g, '');
+            if (enteredFilter !== '') {
+                url += enteredFilter.length === 0
+                    ? '' : `?orderBy="$key"&startAt="${enteredFilter.toLowerCase()}"&endAt="${enteredFilter.toLowerCase()}\uf8ff"`;
+                dispatch(setFilterStatus(true));
+            } else {
+                dispatch(setFilterStatus(false));
+            }
+        } else {
+            dispatch(setFilterStatus(false));
+        }
+        //console.log(url);
 
         axios.get(url)
             .then(response => {

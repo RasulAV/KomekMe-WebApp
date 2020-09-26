@@ -8,7 +8,8 @@ const initialState = {
     supportAppsError: false,
     buttonVisible: false,
     baseLink: "https://ninite.com/",
-    mainLink: ""
+    mainLink: "",
+    filtered: false
 };
 
 const setApplications = (state, action) => {
@@ -53,19 +54,23 @@ const changeCheckBoxLink = (state, action) => {
 const fetchApplicationsFailed = (state, action) => {
     let error;
     switch (action.panelType) {
-        case 'app': return error = updateObject( state, { baseAppsError: true } );
-        case 'support': return error = updateObject( state, { supportAppsError: true } );
+        case 'app': return error = updateObject(state, { baseAppsError: true });
+        case 'support': return error = updateObject(state, { supportAppsError: true });
         default: console.log(`Panel Type for Error didn't founded - [Quick App Reducer]`);
     }
-
     return error
 };
+
+const applacationsFiltered = (state, action) => {
+    return updateObject(state, { filtered: action.filtered })
+}
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "QP_SET": return setApplications(state, action);
         case "QPA_CHECKBOX_CHANGED": return changeCheckBoxLink(state, action);
         case "QP_FETCH_FAILED": return fetchApplicationsFailed(state, action);
+        case "QPA_FILTERED": return applacationsFiltered(state, action);
         default: return state;
     }
 }

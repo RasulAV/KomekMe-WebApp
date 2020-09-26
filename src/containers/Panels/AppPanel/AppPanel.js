@@ -4,19 +4,18 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardTitle,
-
     MDBBox,
-
     MDBListGroup,
     MDBListGroupItem,
-
-    MDBIcon
+    MDBIcon,
+    MDBBadge
 } from "mdbreact";
-
 
 import classes from './AppPanel.module.css';
 
 import qapLogo from '../../../assets/images/logo_qap.svg';
+import qaStandartLogo from '../../../assets/images/logo_qP_standart.svg';
+
 import Logo from '../../../components/Logos/QPLogo/QPLogo';
 import Spinner from '../../../components/UI/Spinner/Spinner';
 import Input from '../../../components/UI/Input/Input';
@@ -31,11 +30,18 @@ class QuickAppPanel extends Component {
     }
 
     componentDidMount() {
-        this.props.onInitQuickAppPanel('app');
-        //console.log('quickApp Panel rendered');
+        this.props.onInitQuickAppPanel('app', this.props.deviceOs);
+        //console.log('Render: baseApp Panel');
     }
 
-    checkboxChangedHandler = (event, inputIdentifier) => {
+    componentDidUpdate(prevProps) {
+        if (this.props.deviceOs !== prevProps.deviceOs) {
+            //console.log('OS changed!')
+            this.props.onInitQuickAppPanel('app', this.props.deviceOs);
+        }
+    }
+
+    checkboxChangedHandler = (inputIdentifier) => {
         this.props.oncheckboxChanged(inputIdentifier);
     }
 
@@ -51,44 +57,86 @@ class QuickAppPanel extends Component {
                 toogle={this.modalToogleHandler()}
                 isopen={this.state.showModal}
                 title="Quick App Panel"
-                body="Gathering together one of the basic applications, installation proceeds automaticaly. Also you can choose several and install it simultaneously. Powered by Ninite"
+                body="Gathering together one of the basic applications, installation proceeds automaticaly. 
+                    Also you can choose several and install it simultaneously. Powered by Ninite"
             />);
-
+        const filterStatus = this.props.filtered ? <MDBBadge tag="a" color="primary">Filter is Active</MDBBadge> : null;
+        let button = null;
         let appsOutput = this.props.error ? <p>Applications can't be loaded!</p> : <Spinner />;
+
         if (this.props.baseApps) {
-
             const apps = [];
-            for (let key in this.props.baseApps) {
-                apps.push({
-                    ...this.props.baseApps[key]
-                });
-            };
+            //console.log(this.props.baseApps);
 
-            appsOutput = apps.map(app => {
-                return (
-                    <MDBListGroupItem key={app.id} >
-                        <div className={classes.AppLabel}>
-                            <Input
-                                id={app.id}
-                                elementType="input"
-                                elementConfig={{ type: 'checkbox', checked: app.checked }}
-                                divClass="custom-control custom-checkbox custom-control-inline"
-                                inputClass="custom-control-input"
-                                labelClass="custom-control-label text-muted"
-                                label={app.title}
-                                changed={(event) => this.checkboxChangedHandler(event, app.id)} />
-                        </div>
-                        <a className="ml-2" href={app.link} title={app.title}>
-                            <img style={{ height: "2rem" }} src={app.imageLink} className="float-right img-fluid" alt={app.title + " image"} />
-                        </a>
-                    </MDBListGroupItem>
-                )
-            });
+            if (Object.keys(this.props.baseApps).length === 0) {
+                appsOutput = <p>Application not found</p>
+            } else {
+                for (let key in this.props.baseApps) {
+                    apps.push({
+                        ...this.props.baseApps[key]
+                    });
+                };
 
-            appsOutput = (<MDBListGroup>{appsOutput}</MDBListGroup>);
+                if (this.props.deviceOs === "windows") {
+                    appsOutput = apps.map(app => {
+                        return (
+                            <MDBListGroupItem key={app.id} >
+                                <div className={classes.AppLabel}>
+                                    <Input
+                                        id={app.id}
+                                        elementType="input"
+                                        elementConfig={{ type: 'checkbox', checked: app.checked }}
+                                        divClass="custom-control custom-checkbox custom-control-inline"
+                                        inputClass="custom-control-input"
+                                        labelClass="custom-control-label text-muted"
+                                        label={app.title}
+                                        changed={() => this.checkboxChangedHandler(app.id)} />
+                                </div>
+                                <a className="ml-2" href={app.link} title={app.title}>
+                                    <img style={{ height: "2rem" }} src={app.imageLink} className="float-right img-fluid" alt={app.title + " image"} />
+                                </a>
+                            </MDBListGroupItem>
+                        )
+                    });
+
+                    button = (
+                        <Button
+                            className={classes.Button}
+                            style={this.props.buttonVisible ? { display: "block" } : { display: "none" }}
+                            href={this.props.mainLink}
+                        >
+                            <MDBIcon
+                                icon="download"
+                                className="mr-1"
+                            />Download
+                        </Button>
+                    )
+                } else {
+                    appsOutput = apps.map((app) => {
+                        return (
+                            <MDBListGroupItem key={app.id} style={{ display: "inline" }}>
+                                <a className="text-muted"
+                                    href={app.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    title={app.description !== "" ? app.title + "-" + app.description : app.title}>
+
+                                    <div className={classes.AppLabel}>
+                                        <span>{app.title}</span>
+                                    </div>
+                                    <img style={{ height: "2rem" }} src={app.imageLink} className="float-right img-fluid" alt={app.title + " image"} />
+                                </a>
+                            </MDBListGroupItem>
+                        )
+                    });
+                };
+                appsOutput = (<MDBListGroup>{appsOutput}</MDBListGroup>);
+            }
         };
+
         return (
-            <MDBCard className="mx-2 mt-4" style={{width: "18rem"}}>
+            <MDBCard className="mx-2 mt-4" style={{ width: "18rem" }}>
+                {filterStatus}
                 {modal}
                 <MDBCardBody >
                     <MDBCardTitle>
@@ -98,22 +146,20 @@ class QuickAppPanel extends Component {
                             onClick={this.modalToogleHandler()}
                             style={{ cursor: "pointer" }}
                         />
-                        <Logo height={'35px'} logo={qapLogo} title="Base Applications"/>
+                        <Logo height={"35px"} logo={qapLogo} title="Base Applications" />
+
                     </MDBCardTitle>
 
-                    <MDBBox display="flex" justifyContent="center">{appsOutput}</MDBBox>
+                    <MDBBox display="flex" justifyContent="center">
+                        {appsOutput}
+                    </MDBBox>
 
-                    <Button
-                        className={classes.Button}
-                        style={this.props.buttonVisible ? { display: "block" } : { display: "none" }}
-                        href={this.props.mainLink}
-                    >
-                        <MDBIcon
-                            icon="download"
-                            className="mr-1"
-                        />
-                            Download
-                    </Button>
+                    {button}
+                    <hr />
+                    <Logo
+                        height={'15px'}
+                        logo={qaStandartLogo}
+                        logoStyle={{ width: "100%", textAlign: "center" }} />
                 </MDBCardBody>
             </MDBCard>
         )
@@ -122,19 +168,20 @@ class QuickAppPanel extends Component {
 
 const mapStateToProps = state => {
     return {
+        deviceOs: state.settings.deviceOs,
         baseApps: state.quickPanels.baseApps,
         error: state.quickPanels.baseAppsError,
         mainLink: state.quickPanels.mainLink,
         baseLink: state.quickPanels.baseLink,
-        buttonVisible: state.quickPanels.buttonVisible
+        buttonVisible: state.quickPanels.buttonVisible,
+        filtered: state.quickPanels.filtered
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onInitQuickAppPanel: (panelType) => dispatch(actions.initQuickPanel(panelType)),
-        oncheckboxChanged: (appId) => dispatch(actions.checkboxChanged(appId)),
-        //onDownloadBtnClick: () => dispatch(actions.downloadButtonClicked())
+        onInitQuickAppPanel: (panelType, deviceOS) => dispatch(actions.initQuickPanel(panelType, deviceOS)),
+        oncheckboxChanged: (appId) => dispatch(actions.checkboxChanged(appId))
     }
 }
 
