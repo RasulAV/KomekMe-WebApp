@@ -7,7 +7,7 @@ import {
 const Search = React.memo(props => {
 
     useEffect(() => {
-        console.log('Render: Search');
+        //console.log('Render: Search');
     });
 
     const searchHandler = (value) => {

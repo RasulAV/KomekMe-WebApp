@@ -25,6 +25,12 @@ export const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('expirationDate');
     localStorage.removeItem('userId');
+
+    const deviceOs = localStorage.getItem('deviceOs');
+    if(deviceOs){
+        localStorage.removeItem('deviceOs');
+    }
+
     return {
         type: "AUTH_LOGOUT"
     }
@@ -40,11 +46,8 @@ const checkAuthTimeout = (expirationTime) => {
 
 export const auth = (email, password, isSignup) => {
     return dispatch => {
-
         dispatch(authStart());
-
         const apiKey = `AIzaSyBZzD3if-SHM13e89fgTk4Riz4gQNjtv1U`;
-
         const authData = {
             email: email,
             password: password,
@@ -96,5 +99,12 @@ export const authCheckState = () => {
                 dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) / 1000 ));
             }
         }
+    }
+};
+
+export const setSignUpState = (isSignUp) => {
+    return {
+        type: "AUTH_SET_SIGNUP",
+        isSignUp: isSignUp 
     }
 }

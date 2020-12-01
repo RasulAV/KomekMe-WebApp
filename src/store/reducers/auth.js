@@ -5,7 +5,8 @@ const initialState = {
     userId: null,
     error: null,
     loading: false,
-    authRedirectPath: '/'
+    authRedirectPath: '/',
+    isSignUp: false
 };
 
 const authStart = (state, action) => {
@@ -36,6 +37,7 @@ const setAuthRedirectPath = (state, action) => {
     return updateObject(state, { authRedirectPath: action.path })
 }
 
+
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "AUTH_START": return authStart(state, action);
@@ -43,6 +45,7 @@ const reducer = (state = initialState, action) => {
         case "AUTH_FAIL": return authFail(state, action);
         case "AUTH_LOGOUT": return authLogout(state, action);
         case "AUTH_SET_REDIRECT_PATH": return setAuthRedirectPath(state, action);
+        case "AUTH_SET_SIGNUP": return updateObject(state, {isSignUp: action.isSignUp});
         default:
             return state;
     }

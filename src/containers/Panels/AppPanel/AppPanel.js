@@ -9,7 +9,7 @@ import {
     MDBListGroupItem,
     MDBIcon,
     MDBBadge
-} from "mdbreact";
+} from 'mdbreact';
 
 import classes from './AppPanel.module.css';
 
@@ -24,19 +24,16 @@ import Modal from '../../../components/UI/Modal/Modal';
 import * as actions from '../../../store/actions/index';
 
 class QuickAppPanel extends Component {
-
     state = {
         showModal: false
     }
 
     componentDidMount() {
         this.props.onInitQuickAppPanel('app', this.props.deviceOs);
-        //console.log('Render: baseApp Panel');
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.deviceOs !== prevProps.deviceOs) {
-            //console.log('OS changed!')
             this.props.onInitQuickAppPanel('app', this.props.deviceOs);
         }
     }
@@ -45,7 +42,7 @@ class QuickAppPanel extends Component {
         this.props.oncheckboxChanged(inputIdentifier);
     }
 
-    modalToogleHandler = () => () => {
+    modalToogleHandler = () => {
         this.setState({
             showModal: !this.state.showModal
         });
@@ -54,9 +51,9 @@ class QuickAppPanel extends Component {
     render() {
         const modal = (
             <Modal
-                toogle={this.modalToogleHandler()}
+                toogle={this.modalToogleHandler}
                 isopen={this.state.showModal}
-                title="Quick App Panel"
+                title="Base Apps Panel"
                 body="Gathering together one of the basic applications, installation proceeds automaticaly. 
                     Also you can choose several and install it simultaneously. Powered by Ninite"
             />);
@@ -66,7 +63,6 @@ class QuickAppPanel extends Component {
 
         if (this.props.baseApps) {
             const apps = [];
-            //console.log(this.props.baseApps);
 
             if (Object.keys(this.props.baseApps).length === 0) {
                 appsOutput = <p>Application not found</p>
@@ -135,7 +131,7 @@ class QuickAppPanel extends Component {
         };
 
         return (
-            <MDBCard className="mx-2 mt-4" style={{ width: "18rem" }}>
+            <MDBCard >
                 {filterStatus}
                 {modal}
                 <MDBCardBody >
@@ -143,7 +139,7 @@ class QuickAppPanel extends Component {
                         <MDBIcon
                             className="float-right grey-text"
                             far icon="question-circle"
-                            onClick={this.modalToogleHandler()}
+                            onClick={this.modalToogleHandler}
                             style={{ cursor: "pointer" }}
                         />
                         <Logo height={"35px"} logo={qapLogo} title="Base Applications" />

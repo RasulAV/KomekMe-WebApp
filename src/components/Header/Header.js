@@ -19,8 +19,8 @@ const Header = (props) => {
 
   let loginLogout = (
     <MDBNavItem title="Login" active={activePage === '/auth' ? true : false}>
-      <MDBNavLink className={classes.navLink} to="/auth">
-        <MDBIcon icon="sign-in-alt" className="mt-3 mt-md-2" />
+      <MDBNavLink className={`${classes.navLink } mt-3 mt-md-2`} to="/auth">
+        <MDBIcon icon="sign-in-alt"  />
       </MDBNavLink>
     </MDBNavItem>
   )
@@ -28,8 +28,8 @@ const Header = (props) => {
   if (props.isAuth) {
     loginLogout = (
       <MDBNavItem title="Logout">
-        <MDBNavLink className={classes.navLink} to="/logout">
-          <MDBIcon icon="sign-out-alt" className="mt-3 mt-md-2" />
+        <MDBNavLink className={`${classes.navLink } mt-3 mt-md-2`} to="/logout">
+          <MDBIcon icon="sign-out-alt"  />
         </MDBNavLink>
       </MDBNavItem>
     )

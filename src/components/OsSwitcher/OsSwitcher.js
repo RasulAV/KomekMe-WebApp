@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import {
     MDBBtnGroup,
-    MDBIcon,
     MDBDropdown,
     MDBDropdownToggle,
     MDBDropdownItem,
@@ -16,23 +15,22 @@ const OsSwitcher = React.memo(props => {
         //console.log('Render: OS Switcher');
     });
 
+    const forceSetOs = true;
+
     return (
-        <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-            <MDBIcon icon="cogs" className="my-3" />
-            <MDBBtnGroup size="sm" className="ml-2" >
-                <MDBDropdown>
-                    <MDBDropdownToggle caret color="none" className={classes.toggler}>
-                        <span className="mr-1">Switch OS</span>
-                    </MDBDropdownToggle>
-                    <MDBDropdownMenu>
-                        <MDBDropdownItem active={props.currentOs==='windows' ? true : false} onClick={() => props.setOs('windows') }>Windows</MDBDropdownItem>
-                        <MDBDropdownItem active={props.currentOs==='macos' ? true : false} onClick={() => props.setOs('macos')}>MacOS</MDBDropdownItem>
-                        <MDBDropdownItem active={props.currentOs==='ios' ? true : false} onClick={() => props.setOs('ios')}>iOS</MDBDropdownItem>
-                        <MDBDropdownItem active={props.currentOs==='android' ? true : false} onClick={() => props.setOs('android')}>Android</MDBDropdownItem>
-                    </MDBDropdownMenu>
-                </MDBDropdown>
-            </MDBBtnGroup>
-        </div >
+        <MDBBtnGroup size="sm" className="ml-2" >
+            <MDBDropdown>
+                <MDBDropdownToggle caret color="none" className={classes.toggler}>
+                    <span className="mr-1">Switch OS</span>
+                </MDBDropdownToggle>
+                <MDBDropdownMenu>
+                    <MDBDropdownItem active={props.currentOs === 'windows' ? true : false} onClick={() => props.setOs('windows', forceSetOs)}>Windows</MDBDropdownItem>
+                    <MDBDropdownItem active={props.currentOs === 'macos' ? true : false} onClick={() => props.setOs('macos', forceSetOs)}>MacOS</MDBDropdownItem>
+                    <MDBDropdownItem active={props.currentOs === 'ios' ? true : false} onClick={() => props.setOs('ios', forceSetOs)}>iOS</MDBDropdownItem>
+                    <MDBDropdownItem active={props.currentOs === 'android' ? true : false} onClick={() => props.setOs('android', forceSetOs)}>Android</MDBDropdownItem>
+                </MDBDropdownMenu>
+            </MDBDropdown>
+        </MDBBtnGroup>
     )
 })
 

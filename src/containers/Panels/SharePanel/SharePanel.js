@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import {
     MDBCard,
     MDBCardBody,
@@ -19,14 +18,13 @@ import Logo from '../../../components/Logos/QPLogo/QPLogo';
 import Modal from '../../../components/UI/Modal/Modal';
 import Button from '../../../components/UI/Button/Button';
 import Notification from '../../../components/UI/Notification/Notification';
-//import * as actions from '../../../store/actions/index';
 
 class quickPanels extends Component {
 
     state = {
         showModal: false,
         downloadLink: "dump",
-        buttonVisible: false,
+        downloadBtnShow: false,
         showNotification: false
     }
 
@@ -34,7 +32,7 @@ class quickPanels extends Component {
         ('Render: share Panel');
     }
 
-    modalToogleHandler = () => () => {
+    modalToogleHandler = () => {
         this.setState({
             showModal: !this.state.showModal
         });
@@ -43,7 +41,7 @@ class quickPanels extends Component {
     fileDownloadLinkShowHandler = (url) => {
         this.setState({
             downloadLink: url,
-            buttonVisible: true
+            downloadBtnShow: true
         });
     }
 
@@ -51,7 +49,7 @@ class quickPanels extends Component {
         copy(this.state.downloadLink);
 
         this.setState({
-            buttonVisible: false,
+            downloadBtnShow: false,
             showNotification: true
         });
 
@@ -65,15 +63,15 @@ class quickPanels extends Component {
     render() {
         const modal = (
             <Modal
-                toogle={this.modalToogleHandler()}
+                toogle={this.modalToogleHandler}
                 isopen={this.state.showModal}
                 title="Quick Share Panel"
                 body="Drop here a file and copy link to share it with another person - It this simple!"
             />);
-        const button = (
+        const copyLinkButton = (
             <Button
                 className={classes.Button}
-                style={this.state.buttonVisible ? { display: "block" } : { display: "none" }}
+                style={this.state.downloadBtnShow ? { display: "block" } : { display: "none" }}
                 clicked={this.copyLinkToClipboardHandler}
             >
                 <MDBIcon
@@ -94,7 +92,7 @@ class quickPanels extends Component {
         }
 
         return (
-            <MDBCard className="mx-2 mt-4" style={{ minWidth: "15rem" }}>
+            <MDBCard >
                 {modal}
                 {notification}
                 <MDBCardBody >
@@ -102,7 +100,7 @@ class quickPanels extends Component {
                         <MDBIcon
                             className="float-right grey-text"
                             far icon="question-circle"
-                            onClick={this.modalToogleHandler()}
+                            onClick={this.modalToogleHandler}
                             style={{ cursor: "pointer" }}
                         />
                         <Logo height={'35px'} logo={qshpLogo} title="Share Your Files" />
@@ -113,7 +111,6 @@ class quickPanels extends Component {
                         <ReactFilestack
                             apikey={'AP5PsQ04RRWVqLNRV3FFQz'}
                             onSuccess={(res) => {
-                                //console.log(res.filesUploaded[0]['url']);
                                 this.fileDownloadLinkShowHandler(res.filesUploaded[0]['url']);
                             }}
                             customRender={({ onPick }) => (
@@ -124,7 +121,7 @@ class quickPanels extends Component {
                                         icon="download"
                                         className="mr-1"
                                     />
-                                    Click here to open picker
+                                    Open File Picker
                                 </Button>
                             )}
                             actionOptions={{
@@ -135,7 +132,7 @@ class quickPanels extends Component {
                         <div id={'embedded'}></div>
                     </MDBBox>
 
-                    {button}
+                    {copyLinkButton}
                     <hr />
                     <Logo
                         height={'15px'}
@@ -147,22 +144,4 @@ class quickPanels extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        // baseApps: state.quickPanels.baseApps,
-        // error: state.quickPanels.baseAppsError,
-        // mainLink: state.quickPanels.mainLink,
-        // baseLink: state.quickPanels.baseLink,
-        // buttonVisible: state.quickPanels.buttonVisible
-    }
-}
-
-const mapDispatchToProps = dispatch => {
-    return {
-        // onInitQuickAppPanel: (panelType) => dispatch(actions.initQuickPanel(panelType)),
-        // oncheckboxChanged: (appId) => dispatch(actions.checkboxChanged(appId)),
-        //onDownloadBtnClick: () => dispatch(actions.downloadButtonClicked())
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(quickPanels);
+export default quickPanels;

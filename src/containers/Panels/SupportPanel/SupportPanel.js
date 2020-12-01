@@ -29,17 +29,15 @@ class QuickSupportPanel extends Component {
 
     componentDidMount() {
         this.props.onInitQuickSupportPanel('support', this.props.deviceOs);
-        //console.log('Render: support Panel');
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.deviceOs !== prevProps.deviceOs) {
-            //console.log('OS changed!')
             this.props.onInitQuickSupportPanel('support', this.props.deviceOs);
         }
     }
 
-    modalToogleHandler = () => () => {
+    modalToogleHandler = () => {
         this.setState({
             showModal: !this.state.showModal
         });
@@ -48,7 +46,7 @@ class QuickSupportPanel extends Component {
     render() {
         const modal = (
             <Modal
-                toogle={this.modalToogleHandler()}
+                toogle={this.modalToogleHandler}
                 isopen={this.state.showModal}
                 title="Quick Support Panel"
                 body="Application for Emergency help, like 
@@ -92,7 +90,7 @@ class QuickSupportPanel extends Component {
         }
 
         return (
-            <MDBCard className="mx-2 mt-4" style={{ width: "18rem" }}>
+            <MDBCard >
                 {filterStatus}
                 {modal}
                 <MDBCardBody >
@@ -100,7 +98,7 @@ class QuickSupportPanel extends Component {
                         <MDBIcon
                             className="float-right grey-text"
                             far icon="question-circle"
-                            onClick={this.modalToogleHandler()}
+                            onClick={this.modalToogleHandler}
                             style={{ cursor: "pointer" }}
                         />
                         <Logo height={'35px'} logo={qspLogo} title="Security and Restore" />

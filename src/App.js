@@ -13,16 +13,13 @@ import * as actions from './store/actions/index';
 
 class App extends Component {
 
-  constructor(props) {
-    super(props);
-    this.props.onSetDeviceOs(currentDevice.os);
-  }
-
   componentDidMount() {
     this.props.onTryAutoSignup();
   }
 
   render() {
+    this.props.onSetDeviceOs(currentDevice.os);
+
     let routes = (
       <Switch>
         <Route path="/about" exact component={AboutRoom} />
