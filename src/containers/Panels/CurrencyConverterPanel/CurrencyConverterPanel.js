@@ -23,11 +23,7 @@ class CurrencyConverterPanel extends Component {
     componentDidUpdate(prevProps, prevState) {
         if (this.state.firstCurrency !== prevState.firstCurrency || this.state.secondCurrency !== prevState.secondCurrency) this.queryCurrenciesValue();
     }
-
-    componentDidMount() {
-        this.queryCurrenciesValue();
-    }
-
+    
     queryCurrenciesValue = () => {
         let currentCurrencies = this.state.firstCurrency + '_' + this.state.secondCurrency;
 
@@ -57,6 +53,7 @@ class CurrencyConverterPanel extends Component {
     }
 
     render() {
+        console.log('CCP rendered');
         return (
             <MDBCard >
                 <MDBCardBody>
