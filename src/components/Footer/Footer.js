@@ -1,6 +1,10 @@
-
 function Footer() {
-  return <footer>This is awesome footer!</footer>;
+  return (
+    <footer>
+      <h1>this is header</h1>
+      This is awesome footer!
+    </footer>
+  );
 }
 
 export default Footer;
