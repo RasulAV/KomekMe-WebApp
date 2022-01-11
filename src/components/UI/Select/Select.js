@@ -5,6 +5,7 @@ function Select() {
       <option value="B">Banana!</option>
       <option value="C">Cranberry</option>
       <option value="D">Dandy</option>
+      <option value="E">Eagle</option>
     </select>
   );
 }
