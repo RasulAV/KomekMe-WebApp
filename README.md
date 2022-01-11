@@ -1,5 +1,4 @@
-This project "Komek Me -webapp", was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project "Komek Me -webapp", was bootstrapped with "Create React App"
 ## Available Scripts
 
 In the project directory, you can run:
