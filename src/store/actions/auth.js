@@ -48,15 +48,16 @@ export const auth = (email, password, isSignup) => {
   return (dispatch) => {
     dispatch(authStart());
     const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+    const googleApiBaseUrl = process.env.REACT_APP_GOOGLE_BASE_URL;
     const authData = {
       email: email,
       password: password,
       returnSecureToken: true,
     };
 
-    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`;
+    let url = `${googleApiBaseUrl}:signInWithPassword?key=${apiKey}`;
     if (isSignup) {
-      url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`;
+      url = `${googleApiBaseUrl}:signUp?key=${apiKey}`;
     }
 
     axios
