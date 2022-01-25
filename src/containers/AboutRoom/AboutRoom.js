@@ -25,7 +25,7 @@ class AboutRoom extends Component {
                             </MDBCardText>
                         </MDBCardBody>
                         <MDBCardFooter className={classes.CardFooter} color="none">
-                            <small>&copy;KomekMe Company. <br />Baku, 2020.</small>
+                            <small>&copy;KomekMe Company. <br />Baku, 2021.</small>
                         </MDBCardFooter>
                     </MDBCard>
                 </MDBBox>
