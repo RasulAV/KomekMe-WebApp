@@ -1,12 +1,12 @@
 {
-  "name": "tenstack-starter",
+  "name": "backend",
   "version": "2.0.0",
   "description": "Typescript Node Express Rest API server starter",
   "private": true,
   "authors": "filoscoder",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "cd .. && husky install",
     "lint": "eslint 'src/**/*.{ts,js}' '__tests__/**/*.{ts,js}'",
     "lint:fix": "eslint --fix 'src/**/*.{ts,js}' '__tests__/**/*.{ts,js}' --quiet",
     "transpile": "tsc",

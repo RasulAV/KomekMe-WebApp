@@ -2,9 +2,11 @@
   "name": "root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "frontend", "backend"
   ],
-  "dependencies": {},
+  "scripts": {
+    "start": "lerna run start --stream"
+  },
   "devDependencies": {
     "lerna": "^7.1.4"
   }

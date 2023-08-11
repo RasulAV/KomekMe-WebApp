@@ -35,7 +35,7 @@ module.exports = {
       repo: 'git@github.com:<username>/<repo-name>.git',
       path: '/home/ubuntu',
       'post-deploy':
-        'yarn && yarn clean && yarn build && pm2 startOrRestart ecosystem.config.js --env production && pm2 set pm2:autodump true && pm2 save',
+        'npm && npm run clean && npm run build && pm2 startOrRestart ecosystem.config.js --env production && pm2 set pm2:autodump true && pm2 save',
     },
   },
 };

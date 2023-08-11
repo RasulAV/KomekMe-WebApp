@@ -91,7 +91,7 @@ import routes from '@/routes';
 Run the server locally. It will be run with Nodemon and ready to serve on port `8080` (unless you specify it on your `.env`)
 
 ```bash
- yarn start # or npm start
+npm start
 ```
 
 > Check [`package.json`](https://github.com/filoscoder/tenstack-starter/blob/master/package.json) to see more "scripts"
@@ -104,13 +104,13 @@ Run the server locally. It will be run with Nodemon and ready to serve on port `
 First, build the application.
 
 ```bash
- yarn build # or npm run build
+ npm run build
 ```
 
 Then, use [`pm2`](https://github.com/Unitech/pm2) to start the application as a service.
 
 ```bash
- yarn service:start # or npm run service:start
+ npm run service:start
 ```
 
 <br>
