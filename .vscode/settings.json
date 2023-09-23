@@ -1,5 +1,3 @@
 {
-    "eslint.workingDirectories": [
-        "frontend", "backend"
-    ]
+  "cSpell.words": ["fastify", "nrwl", "pino", "trpc"]
 }
