@@ -1,153 +1,32 @@
-import { Behance, Facebook, Github, LinkedIn } from './svgImages'
+import { Github, LinkedIn } from './svgImages'
 
 // Navbar Data
 export const menuData = {
   logoLight: '/images/logo.svg',
   logoDark: '/images/logo-light.svg',
-  btnLlink: '/request-demo',
   menuContent: [
     {
       id: 1,
       title: 'Home',
-      submenu: [
-        {
-          id: 1.1,
-          title: 'Home 1',
-          path: '/',
-          newTab: false,
-        },
-        {
-          id: 1.2,
-          title: 'Home 2',
-          path: '/home-2',
-          newTab: false,
-        },
-        {
-          id: 1.3,
-          title: 'Home 3',
-          path: '/home-3',
-          newTab: false,
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: 'About',
-      path: '/about',
+      path: '/',
       newTab: false,
     },
     {
-      id: 3,
+      id: 2,
       title: 'Services',
       path: '/services',
       newTab: false,
     },
     {
+      id: 3,
+      title: 'Blog',
+      path: '/blog',
+      newTab: false,
+    },
+    {
       id: 4,
-      title: 'Pages',
-      submenu: [
-        {
-          id: 4.1,
-          title: 'Team',
-          path: '/teams',
-          newTab: false,
-        },
-        {
-          id: 4.2,
-          title: 'Team details',
-          path: '/teams/1',
-          newTab: false,
-        },
-        {
-          id: 4.3,
-          title: 'Testimonials',
-          path: '/testimonial',
-          newTab: false,
-        },
-        {
-          id: 4.4,
-          title: 'Integration',
-          path: '/integration',
-          newTab: false,
-        },
-        {
-          id: 4.5,
-          title: 'FAQs',
-          path: '/faq',
-          newTab: false,
-        },
-        {
-          id: 4.6,
-          title: 'Pricing',
-          path: '/price',
-          newTab: false,
-        },
-        {
-          id: 4.7,
-          title: 'Career',
-          path: '/career',
-          newTab: false,
-        },
-        {
-          id: 4.8,
-          title: 'Career Single',
-          path: '/career/business-administrator',
-          newTab: false,
-        },
-        {
-          id: 4.9,
-          title: 'login',
-          path: '/login',
-          newTab: false,
-        },
-        {
-          id: 4.11,
-          title: 'Sign Up',
-          path: '/signup',
-          newTab: false,
-        },
-        {
-          id: 4.12,
-          title: '404',
-          path: '/not-found',
-          newTab: false,
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: 'News',
-      submenu: [
-        {
-          id: 5.1,
-          title: 'blog grid',
-          path: '/blog',
-          newTab: false,
-        },
-        {
-          id: 5.2,
-          title: 'Blog list',
-          path: '/blog-list',
-          newTab: false,
-        },
-        {
-          id: 5.3,
-          title: 'Blog categories',
-          path: '/categories/Marketing',
-          newTab: false,
-        },
-        {
-          id: 5.4,
-          title: 'Blog tags',
-          path: '/tags/Benefits',
-          newTab: false,
-        },
-      ],
-    },
-    {
-      id: 6,
-      title: 'Contact Us',
-      path: '/contact',
+      title: 'About',
+      path: '/about',
       newTab: false,
     },
   ],
@@ -913,8 +792,8 @@ export const FooterData = {
   logo: '/images/logo.svg',
   logoDark: '/images/logo-light.svg',
   footerText: 'Turpis tortor nunc sed amet et faucibus vitae morbi congue sed id mauris.',
-  copyright: `${new Date().getFullYear()} Aplio. All Rights Reserved`,
-  email: 'info@example.com',
+  copyright: `${new Date().getFullYear()} Komek Me. All Rights Reserved`,
+  email: 'admin@komek.me',
   phone: '+3 230 705 5448',
   expolre: [
     {
@@ -929,87 +808,47 @@ export const FooterData = {
     },
     {
       id: 3,
-      name: 'Career',
-      link: '/career',
-    },
-    {
-      id: 4,
-      name: 'Payment',
-      link: '/home-2',
-    },
-    {
-      id: 5,
       name: 'Pricing',
       link: '/price',
     },
     {
-      id: 6,
+      id: 4,
       name: "Faq's",
       link: '/faq',
     },
     {
-      id: 7,
-      name: 'Testimonials',
-      link: '/testimonial',
+      id: 5,
+      name: 'Contact Us',
+      link: '/contact',
     },
   ],
   resources: [
     {
       id: 1,
-      name: 'Banking',
-      link: '/home-3',
-    },
-    {
-      id: 2,
-      name: 'Team',
-      link: '/teams',
-    },
-    {
-      id: 3,
-      name: 'Integration',
-      link: '/integration',
-    },
-    {
-      id: 4,
       name: 'Blog',
       link: '/blog',
     },
     {
-      id: 5,
+      id: 2,
       name: 'Log In',
       link: '/login',
     },
     {
-      id: 6,
+      id: 3,
       name: 'Sign Up',
       link: '/signup',
-    },
-    {
-      id: 7,
-      name: '404',
-      link: '/not-found',
     },
   ],
 
   socialLinks: [
     {
       id: 1,
-      name: <Facebook />,
-      link: '#',
-    },
-    {
-      id: 2,
       name: <Github />,
       link: '#',
     },
     {
       id: 3,
       name: <LinkedIn />,
-      link: '#',
-    },
-    {
-      id: 4,
-      name: <Behance />,
       link: '#',
     },
   ],
