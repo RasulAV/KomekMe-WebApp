@@ -8,12 +8,18 @@ const Footer = () => {
       <div className="container">
         <div className="mb-20 grid grid-cols-12 max-lg:gap-y-10 max-lg:text-center">
           <div className="col-span-12 lg:col-span-6">
-            <Image src={FooterData.logo} alt="logo" className="mb-10 inline-block dark:hidden" width={70} height={29} />
+            <Image
+              src={FooterData.logo}
+              alt="logo"
+              className="mb-10 inline-block dark:hidden"
+              width={115}
+              height={29}
+            />
             <Image
               src={FooterData.logoDark}
               alt="logo dark version"
               className="mb-10 hidden dark:inline-block"
-              width={70}
+              width={115}
               height={29}
             />
             <p className="max-w-[350px] max-lg:mx-auto">{FooterData.footerText}</p>

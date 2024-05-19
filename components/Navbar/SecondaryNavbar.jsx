@@ -42,12 +42,12 @@ const SecondaryNavbar = () => {
         <nav className="container flex items-center">
           <div className="nav-logo">
             <Link href="/">
-              <Image src={menuData.logoLight} alt="logo" className="dark:hidden" width={70} height={29} />
+              <Image src={menuData.logoLight} alt="logo" className="dark:hidden" width={115} height={29} />
               <Image
                 src={menuData.logoDark}
                 alt="logo dark version"
                 className="hidden dark:inline-block"
-                width={70}
+                width={115}
                 height={29}
               />
             </Link>
@@ -110,11 +110,6 @@ const SecondaryNavbar = () => {
                   />
                 </svg>
               </button>
-            </li>
-            <li className="max-lg:hidden">
-              <Link href="/request-demo" className="btn btn-navbar btn-sm">
-                Request Demo
-              </Link>
             </li>
             <li className="max-lg:inline-block lg:hidden ">
               <button
@@ -197,12 +192,6 @@ const SecondaryNavbar = () => {
                   )}
                 </li>
               ))}
-
-              <li>
-                <Link href="/request-demo" className="btn btn-navbar btn-sm">
-                  Request Demo
-                </Link>
-              </li>
             </ul>
           </div>
         </nav>
