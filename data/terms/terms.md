@@ -2,7 +2,7 @@
 title: Terms & Conditions
 ---
 
-At Aplio, we take your privacy seriously. This privacy policy explains how we collect, use, and protect your personal information.
+At Komek Me, we take your privacy seriously. This privacy policy explains how we collect, use, and protect your personal information.
 
 ### Information We Collect
 

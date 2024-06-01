@@ -1,6 +1,6 @@
-# Aplio
+# Komek Me
 
-Aplio Nextjs Theme Development Structure.
+Help you with IT.
 
 ## Getting Started
 
