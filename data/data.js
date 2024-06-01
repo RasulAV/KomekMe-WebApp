@@ -789,8 +789,8 @@ export const IntegrationData = [
 ]
 
 export const FooterData = {
-  logo: '/images/logo.svg',
-  logoDark: '/images/logo-light.svg',
+  logo: '/images/logo-mini.png',
+  logoDark: '/images/logo-mini.png',
   footerText: 'Turpis tortor nunc sed amet et faucibus vitae morbi congue sed id mauris.',
   copyright: `${new Date().getFullYear()} Komek Me. All Rights Reserved`,
   email: 'admin@komek.me',

@@ -8,19 +8,13 @@ const Footer = () => {
       <div className="container">
         <div className="mb-20 grid grid-cols-12 max-lg:gap-y-10 max-lg:text-center">
           <div className="col-span-12 lg:col-span-6">
-            <Image
-              src={FooterData.logo}
-              alt="logo"
-              className="mb-10 inline-block dark:hidden"
-              width={115}
-              height={29}
-            />
+            <Image src={FooterData.logo} alt="logo" className="mb-10 inline-block dark:hidden" width={65} height={65} />
             <Image
               src={FooterData.logoDark}
               alt="logo dark version"
               className="mb-10 hidden dark:inline-block"
-              width={115}
-              height={29}
+              width={65}
+              height={65}
             />
             <p className="max-w-[350px] max-lg:mx-auto">{FooterData.footerText}</p>
           </div>
@@ -104,7 +98,7 @@ const Footer = () => {
         <div className="py-10 max-lg:text-center">
           <div className="flex max-lg:flex-col lg:items-center">
             <p className="max-lg:mb-10">{FooterData.copyright}</p>
-            <ul className="flex items-center gap-15 max-lg:justify-center  lg:ml-auto">
+            <ul className="flex items-center gap-15 max-lg:justify-center lg:ml-auto">
               <li>
                 <Link
                   href="/privacy"
