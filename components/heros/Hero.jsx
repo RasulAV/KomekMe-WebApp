@@ -115,7 +115,7 @@ const Hero = () => {
             <h1 className="mb-12 max-md:mb-8">
               Make your{' '}
               <span className="inline-block rounded-[88px] border-2 border-paragraph bg-[#D9D9D900] px-5 pb-2.5 pt-0.5 font-playfair italic leading-none dark:border-[#F0F3EA]">
-                Finance
+                IT infrastructure
               </span>
               more efficient.
             </h1>
