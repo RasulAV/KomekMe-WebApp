@@ -1,21 +1,36 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, FormEvent, ChangeEvent } from 'react'
 import { toast } from 'react-hot-toast'
 
-const ApiTester = () => {
-  const [url, setUrl] = useState('')
-  const [requestBody, setRequestBody] = useState('')
-  const [response, setResponse] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [method, setMethod] = useState('POST')
+type HttpMethod = 'GET' | 'POST'
 
-  const handleSubmit = async (e) => {
+interface RequestOptions {
+  method: HttpMethod
+  headers: {
+    'Content-Type': string
+  }
+  body?: string
+}
+
+interface ApiResponse {
+  error?: string
+  [key: string]: any
+}
+
+const ApiTester = () => {
+  const [url, setUrl] = useState<string>('')
+  const [requestBody, setRequestBody] = useState<string>('')
+  const [response, setResponse] = useState<ApiResponse | null>(null)
+  const [loading, setLoading] = useState<boolean>(false)
+  const [method, setMethod] = useState<HttpMethod>('POST')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
 
     try {
-      let requestOptions = {
+      const requestOptions: RequestOptions = {
         method,
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +51,7 @@ const ApiTester = () => {
           const params = new URLSearchParams()
           const bodyParams = JSON.parse(requestBody)
           Object.entries(bodyParams).forEach(([key, value]) => {
-            params.append(key, value)
+            params.append(key, String(value))
           })
           targetUrl = `${url}${url.includes('?') ? '&' : '?'}${params.toString()}`
         } catch (error) {
@@ -45,12 +60,13 @@ const ApiTester = () => {
       }
 
       const response = await fetch(targetUrl, requestOptions)
-      const data = await response.json()
+      const data: ApiResponse = await response.json()
       setResponse(data)
       toast.success('Request sent successfully!')
     } catch (error) {
-      toast.error(error.message || 'Failed to send request')
-      setResponse({ error: error.message })
+      const errorMessage = error instanceof Error ? error.message : 'Failed to send request'
+      toast.error(errorMessage)
+      setResponse({ error: errorMessage })
     } finally {
       setLoading(false)
     }
@@ -67,7 +83,7 @@ const ApiTester = () => {
               <div className="flex items-center space-x-4">
                 <label className="text-sm font-medium text-dark dark:text-white">Method:</label>
                 <div className="flex rounded-md shadow-sm">
-                  {['GET', 'POST'].map((m) => (
+                  {(['GET', 'POST'] as const).map((m) => (
                     <button
                       key={m}
                       type="button"
@@ -89,7 +105,7 @@ const ApiTester = () => {
                   type="url"
                   required
                   value={url}
-                  onChange={(e) => setUrl(e.target.value)}
+                  onChange={(e: ChangeEvent<HTMLInputElement>) => setUrl(e.target.value)}
                   className="text-body-color shadow-one dark:shadow-signUp w-full rounded-md border border-transparent bg-white px-6 py-3 text-base outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
                   placeholder="https://api.example.com/endpoint"
                 />
@@ -101,9 +117,9 @@ const ApiTester = () => {
                 </label>
                 <textarea
                   value={requestBody}
-                  onChange={(e) => setRequestBody(e.target.value)}
+                  onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setRequestBody(e.target.value)}
                   className="text-body-color shadow-one dark:shadow-signUp w-full rounded-md border border-transparent bg-white px-6 py-3 text-base outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
-                  rows="8"
+                  rows={8}
                   placeholder={method === 'POST' ? '{"key": "value"}' : '{"param1": "value1", "param2": "value2"}'}
                 />
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
