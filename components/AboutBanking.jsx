@@ -56,10 +56,9 @@ const AboutBanking = () => {
           <div>
             <p className="section-tagline">ABOUT ONLINE BANKING</p>
 
-            <h2 className="mb-8 max-md:mb-4">Incredibly easy and hassle-free online banking</h2>
+            <h2 className="mb-8 max-md:mb-4">Невероятно простой и удобный онлайн-банкинг</h2>
             <p className="mb-11 max-md:mb-6">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text nothing Before & After
-              magazine.
+              Мы предлагаем современные решения для эффективного управления финансами вашей компании
             </p>
             <ul className="mb-14 [&>*:not(:last-child)]:mb-6 max-md:[&>*:not(:last-child)]:mb-4">
               <li className="flex items-center gap-x-2 ">
@@ -73,7 +72,7 @@ const AboutBanking = () => {
                     />
                   </svg>
                 </span>
-                <span className="dark:text-white"> Income and expenses tracker </span>
+                <span className="dark:text-white">Отслеживание доходов и расходов</span>
               </li>
               <li className="flex items-center gap-x-2">
                 <span className=" shadow-icon  item-center relative flex justify-center rounded-full bg-white dark:bg-dark-200">

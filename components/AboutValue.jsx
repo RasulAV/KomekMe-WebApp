@@ -48,12 +48,12 @@ const AboutValue = () => {
           </motion.div>
 
           <div>
-            <p className="section-tagline">Core Value</p>
+            <p className="section-tagline">Основные ценности</p>
 
-            <h2 className=" mb-8 max-md:mb-4">The philosophy that underpins our organization.</h2>
+            <h2 className=" mb-8 max-md:mb-4">Философия, лежащая в основе нашей организации</h2>
             <p className="mb-11  max-md:mb-6">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text nothing Before & After
-              magazine.
+              Мы стремимся к инновациям и постоянному совершенствованию наших услуг для удовлетворения потребностей
+              клиентов
             </p>
             <ul className="mb-14 [&>*:not(:last-child)]:mb-6 max-md:[&>*:not(:last-child)]:mb-4">
               <li className="flex items-center gap-x-2 ">

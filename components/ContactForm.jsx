@@ -62,16 +62,17 @@ const ContactForm = () => {
                     <label
                       htmlFor="message"
                       className="mb-2 block font-jakarta_sans text-sm font-medium text-paragraph dark:text-white">
-                      Message
+                      Сообщение
                     </label>
                     <textarea
                       name="first-name"
                       id="message"
                       rows="10"
-                      className="block w-full resize-none rounded border border-borderColor bg-white px-5 py-2.5   text-sm text-paragraph-light outline-none transition-all duration-300 placeholder:text-paragraph-light focus:border-primary dark:border-borderColor-dark dark:bg-dark-200 dark:focus:border-primary"></textarea>
+                      className="block w-full resize-none rounded border border-borderColor bg-white px-5 py-2.5   text-sm text-paragraph-light outline-none transition-all duration-300 placeholder:text-paragraph-light focus:border-primary dark:border-borderColor-dark dark:bg-dark-200 dark:focus:border-primary"
+                      placeholder="Введите ваше сообщение"></textarea>
                   </div>
                   <div className="col-span-full mx-auto text-center">
-                    <button className="btn">Contact Now</button>
+                    <button className="btn">Отправить</button>
                   </div>
                 </div>
               </form>

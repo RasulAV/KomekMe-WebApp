@@ -25,19 +25,18 @@ const Price = () => {
             animate={controlAnimation}
             variants={fadeUpAnimation}>
             <div className="">
-              <p className="mb-4 font-medium uppercase">OUR PRICING</p>
+              <p className="mb-4 font-medium uppercase">НАШИ ТАРИФЫ</p>
               <h1 className="mb-10 max-lg:mb-10">
-                Choose the right plan for <br />
-                your business
+                Выберите подходящий план <br />
+                для вашего бизнеса
               </h1>
               <p className="mx-auto mb-12 max-w-[590px] max-lg:mb-10">
-                Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&rsquo;s not
-                Latin, though it looks like it
+                Мы предлагаем гибкие тарифные планы, которые подойдут для любого масштаба бизнеса
               </p>
             </div>
             <div className="pricing mt-8">
               <label className="relative z-[110] inline-flex cursor-pointer items-center">
-                <span className="mr-2.5 text-base font-semibold text-paragraph dark:text-white">Monthly</span>
+                <span className="mr-2.5 text-base font-semibold text-paragraph dark:text-white">Ежемесячно</span>
                 <input
                   type="checkbox"
                   id="priceCheck"
@@ -45,7 +44,7 @@ const Price = () => {
                   onChange={() => setIsAnnual(!isAnnual)}
                 />
                 <div className=" relative h-[34px] w-15 rounded-[20px] bg-paragraph before:absolute  before:left-1/2 before:top-1/2 before:h-[calc(100%-10px)] before:w-[calc(100%-10px)] before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-[20px]  before:border before:border-dashed before:border-white/40 before:content-[''] after:absolute after:start-[5px] after:top-1/2 after:h-6 after:w-6 after:-translate-y-1/2 after:rounded-full after:bg-primary after:transition-all after:content-[''] peer-checked:after:start-[7px] peer-checked:after:translate-x-full "></div>
-                <span className="ms-2.5 text-base font-semibold text-paragraph dark:text-white">Yearly</span>
+                <span className="ms-2.5 text-base font-semibold text-paragraph dark:text-white">Ежегодно</span>
               </label>
             </div>
           </motion.div>

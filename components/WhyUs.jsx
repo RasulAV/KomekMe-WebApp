@@ -66,13 +66,11 @@ const WhyUs = () => {
             <p className="section-tagline">WHY CHOOSE US</p>
 
             <h2 className="mb-8">
-              Control the flow of
-              <br />
-              money easily
+              Управляйте финансами
+              <br />с легкостью
             </h2>
             <p className="mb-11">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text nothing Before & After
-              magazine.
+              Мы предоставляем современные инструменты для эффективного управления финансами вашей компании
             </p>
             <ul className="mb-14 [&>*:not(:last-child)]:mb-6 ">
               <li className="flex items-center gap-x-2 ">
@@ -86,7 +84,7 @@ const WhyUs = () => {
                     />
                   </svg>
                 </span>
-                <span className="dark:text-white"> It’s scalable and secure </span>
+                <span className="dark:text-white"> Масштабируемость и безопасность </span>
               </li>
               <li className="flex items-center gap-x-2">
                 <span className=" shadow-icon  item-center relative flex justify-center rounded-full bg-white dark:bg-dark-200">
@@ -103,7 +101,7 @@ const WhyUs = () => {
                     />
                   </svg>
                 </span>
-                <span className="dark:text-white"> Artificial Intelligence Feature </span>
+                <span className="dark:text-white"> Будущее с Исскуственным Интеллектом </span>
               </li>
               <li className="flex items-center gap-x-2 ">
                 <span className=" shadow-icon  item-center relative flex justify-center rounded-full bg-white dark:bg-dark-200">
@@ -121,7 +119,7 @@ const WhyUs = () => {
                   </svg>
                 </span>
 
-                <span className="dark:text-white"> Offline version available </span>
+                <span className="dark:text-white"> Доступно офлайн </span>
               </li>
             </ul>
           </div>
@@ -131,12 +129,10 @@ const WhyUs = () => {
             <p className="section-tagline">EXPLORE POSSIBILITIES</p>
 
             <h2 className="mb-8">
-              Manage your money <br />
-              with aplio.
+              Управляйте финансами <br />с нами
             </h2>
             <p className="mb-11">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text nothing Before & After
-              magazine.
+              Мы предоставляем инновационные решения для эффективного управления финансами вашей компании
             </p>
             <ul className="mb-14 max-w-[490px] [&>*:not(:last-child)]:mb-5">
               <li className="flex items-center gap-x-5 rounded border border-dashed border-gray-100 p-2.5 dark:border-borderColor-dark">
@@ -146,7 +142,7 @@ const WhyUs = () => {
                     className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary"
                   />
                 </span>
-                <span className="font-jakarta_sans font-semibold"> It’s scalable and secure </span>
+                <span className="font-jakarta_sans font-semibold"> Масштабируемость и безопасность </span>
               </li>
               <li className="flex items-center gap-x-5 rounded border border-dashed border-gray-100 p-2.5 dark:border-borderColor-dark">
                 <span className=" shadow-icon relative h-10 w-10 gap-6 rounded-full bg-[#F3F8E8]  dark:bg-dark-200">
@@ -155,11 +151,11 @@ const WhyUs = () => {
                     className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary"
                   />
                 </span>
-                <span className="font-jakarta_sans font-semibold"> Cash Flow Statements </span>
+                <span className="font-jakarta_sans font-semibold"> Отчеты о движении средств </span>
               </li>
             </ul>
             <Link href="/contact" className="btn">
-              Get Started
+              Начать
             </Link>
           </div>
           <div className="relative  max-md:order-2">

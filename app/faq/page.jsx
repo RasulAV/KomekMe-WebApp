@@ -33,9 +33,9 @@ const FaqPage = () => {
   return (
     <>
       <PageHero
-        subtitle="FAQ’S"
-        title="Frequently asked <br> question"
-        paragraph="Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin, though it looks like it"
+        subtitle="ВОПРОСЫ И ОТВЕТЫ"
+        title="Часто задаваемые <br> вопросы"
+        paragraph="Здесь вы найдете ответы на самые распространенные вопросы о наших услугах и сервисах"
       />
       <section className="pb-150 max-md:overflow-hidden">
         <div className="container relative z-10">
