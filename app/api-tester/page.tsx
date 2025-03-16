@@ -25,6 +25,49 @@ const ApiTester = () => {
   const [loading, setLoading] = useState<boolean>(false)
   const [method, setMethod] = useState<HttpMethod>('POST')
 
+  const convertToValidJson = (input: string): string => {
+    try {
+      // First try if it's already valid JSON
+      JSON.parse(input)
+      return input
+    } catch {
+      try {
+        // Try to convert JS object notation to JSON
+        // Replace single quotes with double quotes
+        let processed = input
+          .replace(/'/g, '"') // Replace single quotes with double quotes
+          .replace(/(\w+):/g, '"$1":') // Add quotes to property names
+          .replace(/,(\s*[}\]])/g, '$1') // Remove trailing commas
+
+        // Validate the processed string
+        JSON.parse(processed)
+        return processed
+      } catch {
+        // If conversion failed, return original input
+        return input
+      }
+    }
+  }
+
+  const handleTextAreaChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const newValue = e.target.value
+    const convertedValue = convertToValidJson(newValue)
+
+    // Only update if conversion actually changed something
+    if (convertedValue !== newValue) {
+      try {
+        // Format the JSON nicely
+        const formattedJson = JSON.stringify(JSON.parse(convertedValue), null, 2)
+        setRequestBody(formattedJson)
+        toast.success('Converted to valid JSON format')
+      } catch {
+        setRequestBody(newValue)
+      }
+    } else {
+      setRequestBody(newValue)
+    }
+  }
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
@@ -117,13 +160,15 @@ const ApiTester = () => {
                 </label>
                 <textarea
                   value={requestBody}
-                  onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setRequestBody(e.target.value)}
-                  className="text-body-color shadow-one dark:shadow-signUp w-full rounded-md border border-transparent bg-white px-6 py-3 text-base outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
+                  onChange={handleTextAreaChange}
+                  className="text-body-color shadow-one dark:shadow-signUp w-full rounded-md border border-transparent bg-white px-6 py-3 font-mono text-base outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51]"
                   rows={8}
                   placeholder={method === 'POST' ? '{"key": "value"}' : '{"param1": "value1", "param2": "value2"}'}
                 />
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                  {method === 'GET' ? 'JSON will be converted to query parameters' : 'Enter request body as JSON'}
+                  {method === 'GET'
+                    ? 'JSON will be converted to query parameters'
+                    : 'Enter request body as JSON or JavaScript object notation'}
                 </p>
               </div>
 
