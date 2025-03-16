@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar/Navbar'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import '@/scss/theme.scss'
 import Providers from '@/utils/providers'
+import { Toaster } from 'react-hot-toast'
 
 import { Inter, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google'
 
@@ -43,6 +44,16 @@ export default function RootLayout({ children }) {
           <Navbar />
           <main>{children}</main>
           <Footer />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              style: {
+                background: '#333',
+                color: '#fff',
+              },
+              duration: 3000,
+            }}
+          />
         </Providers>
       </body>
     </html>
