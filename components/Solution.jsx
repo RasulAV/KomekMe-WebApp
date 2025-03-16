@@ -65,27 +65,26 @@ const Solution = () => {
           <div className="max-md:order-1 lg:-mt-15">
             <p className="section-tagline">Strong Solutions</p>
 
-            <h2 className="mb-8 max-lg:mb-4">Ensure strong solutions are available at all times</h2>
+            <h2 className="mb-8 max-lg:mb-4">Надежные решения доступны в любое время</h2>
             <p className="mb-11 max-lg:mb-6">
-              Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&rsquo;s not Latin
-              though it looks like nothing.
+              Мы обеспечиваем бесперебойную работу всех систем и предоставляем круглосуточную поддержку
             </p>
             <ul className="mb-14 flex max-lg:mb-6 max-md:flex-col max-md:gap-y-5 lg:items-center lg:[&>*:not(:last-child)]:mr-10">
               <li className="relative flex items-center gap-x-2 ">
                 <FontAwesomeIcon icon={faCheck} className="text-paragraph dark:text-primary" />
-                <span className="font-jakarta_sans font-medium dark:text-white">On Demand Support</span>
+                <span className="font-jakarta_sans font-medium dark:text-white">Поддержка по запросу</span>
               </li>
               <li className="relative flex items-center gap-x-2 ">
                 <FontAwesomeIcon icon={faCheck} className="text-paragraph dark:text-primary" />
-                <span className="font-jakarta_sans font-medium dark:text-white">Information Sharing</span>
+                <span className="font-jakarta_sans font-medium dark:text-white">Обмен информацией</span>
               </li>
               <li className="relative flex items-center gap-x-2 ">
                 <FontAwesomeIcon icon={faCheck} className="text-paragraph dark:text-primary" />
-                <span className="font-jakarta_sans font-medium dark:text-white">Cloud Technology</span>
+                <span className="font-jakarta_sans font-medium dark:text-white">Облачные технологии</span>
               </li>
             </ul>
             <Link href="/contact" className="btn-outline">
-              Start Your Journey
+              Начать сотрудничество
             </Link>
           </div>
         </div>

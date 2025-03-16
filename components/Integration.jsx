@@ -86,16 +86,15 @@ const Integration = () => {
     <section className="bg-white pb-150  dark:bg-dark-300 max-md:pb-20">
       <div className="container relative z-10">
         <div className="mx-auto max-w-[620px] text-center">
-          <p className="section-tagline">Top Integration</p>
+          <p className="section-tagline">Интеграции</p>
 
-          <h2 className="mb-8">Make productivity easier with 50+ Integrations</h2>
+          <h2 className="mb-8">Повысьте продуктивность с помощью 50+ интеграций</h2>
           <p className="mb-10">
-            Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It&rsquo;s not Latin
-            though it looks like nothing.
+            Мы предлагаем широкий спектр интеграций с популярными сервисами и платформами для оптимизации вашей работы
           </p>
 
           <Link href="/contact" className="btn-outline">
-            Start Your Journey
+            Начать сотрудничество
           </Link>
         </div>
         <div className="relative -z-10 mx-auto -mt-15 max-w-[1068px] max-md:hidden">

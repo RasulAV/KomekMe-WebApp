@@ -11,9 +11,9 @@ export default function ServicePage() {
   return (
     <>
       <PageHero
-        subtitle="OUR SERVICES"
-        title="The world’s best companies <br> trust aplio "
-        paragraph="Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin, though it looks like it"
+        subtitle="НАШИ УСЛУГИ"
+        title="Лучшие компании мира <br> доверяют нам"
+        paragraph="Мы предоставляем полный спектр IT-услуг для развития и оптимизации вашего бизнеса"
       />
       <Services sectionDetails={false} />
       <MembersCounter />

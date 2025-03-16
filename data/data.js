@@ -7,25 +7,25 @@ export const menuData = {
   menuContent: [
     {
       id: 1,
-      title: 'Home',
+      title: 'Главная',
       path: '/',
       newTab: false,
     },
     {
       id: 2,
-      title: 'Services',
+      title: 'Услуги',
       path: '/services',
       newTab: false,
     },
     {
       id: 3,
-      title: 'Blog',
+      title: 'Блог',
       path: '/blog',
       newTab: false,
     },
     {
       id: 4,
-      title: 'About',
+      title: 'О нас',
       path: '/about',
       newTab: false,
     },
@@ -81,7 +81,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceExpectationList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -94,7 +94,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceQualificationsList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -119,7 +119,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceExpectationList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -132,7 +132,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceQualificationsList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -157,7 +157,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceExpectationList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -170,7 +170,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceQualificationsList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -195,7 +195,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceExpectationList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -208,7 +208,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceQualificationsList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -233,7 +233,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceExpectationList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -246,7 +246,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceQualificationsList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -271,7 +271,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceExpectationList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -284,7 +284,7 @@ export const ServiceData = [
       'Morbi lorem proin morbi tempor risus. Nisl lobortis diam id faucibus pretium vitae suspendisse sed accumsan. Sodales morbi tristique elit cursus gravida. Ullamcorper commodo eget pulvinar pretium. Condimentum rhoncus commodo amet nec auctor nibh vel mi blandit. Neque ultrices nunc condimentum morbi risus tincidunt. Vel arcu lacus non ornare. Porttitor in rhoncus magna augue adipiscing.',
     serviceQualificationsList: [
       {
-        item: 'It’s scalable and secure',
+        item: "It's scalable and secure",
       },
       {
         item: 'Artificial Intelligence Feature',
@@ -321,38 +321,44 @@ export const FAQData = [
   {
     id: 1,
     type: ['general', 'changelog'],
-    question: 'What is a business agency?',
-    answer: "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.",
+    question: 'Что такое бизнес-агентство?',
+    answer:
+      'Бизнес-агентство - это компания, которая предоставляет профессиональные услуги для развития и оптимизации бизнеса клиентов.',
   },
   {
     id: 2,
     type: ['general'],
-    question: 'What services does a business agency provide?',
-    answer: "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.",
+    question: 'Какие услуги предоставляет бизнес-агентство?',
+    answer:
+      'Мы предоставляем широкий спектр услуг, включая IT-консалтинг, разработку программного обеспечения, оптимизацию бизнес-процессов и техническую поддержку.',
   },
   {
     id: 3,
     type: ['general', 'changelog'],
-    question: 'How often should I update my website?',
-    answer: "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.",
+    question: 'Как часто нужно обновлять веб-сайт?',
+    answer:
+      'Рекомендуется регулярно обновлять контент и функционал веб-сайта, минимум раз в месяц, чтобы поддерживать его актуальность и эффективность.',
   },
   {
     id: 4,
     type: ['general', 'terms'],
-    question: 'How do subscriptions work?',
-    answer: "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.",
+    question: 'Как работает подписка?',
+    answer:
+      'Наша система подписки предоставляет гибкие планы обслуживания с ежемесячной или годовой оплатой, включающие различные уровни поддержки и услуг.',
   },
   {
     id: 5,
     type: ['changelog', 'terms'],
-    question: 'What other services are you compatible with?',
-    answer: "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.",
+    question: 'С какими сервисами вы совместимы?',
+    answer:
+      'Мы работаем со всеми основными платформами и технологиями, обеспечивая полную интеграцию с вашей существующей инфраструктурой.',
   },
   {
     id: 6,
     type: ['general', 'terms'],
-    question: 'What other services are you compatible with?',
-    answer: "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It's not Latin.",
+    question: 'Какие дополнительные сервисы вы предлагаете?',
+    answer:
+      'Мы предлагаем широкий спектр дополнительных услуг, включая облачные решения, кибербезопасность и аналитику данных.',
   },
 ]
 
@@ -362,11 +368,11 @@ export const TestimonialData = [
     logoLight: '/images/testimonial/bodygroup.svg',
     logoDark: '/images/testimonial/bodygroup-dark.svg',
     testimonial:
-      "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it looks like it, and it actually says nothing.",
+      'Отличный сервис! Команда профессионалов помогла нам оптимизировать IT-инфраструктуру и значительно повысить эффективность работы.',
     rating: 4,
     author: {
-      name: 'Robert Frost',
-      designation: 'Lead Developer',
+      name: 'Роберт Фрост',
+      designation: 'Ведущий разработчик',
       image: '/images/testimonial/avatar1.png',
     },
   },
@@ -375,11 +381,11 @@ export const TestimonialData = [
     logoLight: '/images/testimonial/caudile.svg',
     logoDark: '/images/testimonial/caudile-dark.svg',
     testimonial:
-      "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it looks like it, and it actually says nothing.",
+      'Благодаря Komek Me мы смогли модернизировать нашу IT-систему и улучшить безопасность данных. Рекомендуем!',
     rating: 5,
     author: {
-      name: 'Guy Hawkins',
-      designation: 'Developer',
+      name: 'Гай Хокинс',
+      designation: 'Разработчик',
       image: '/images/testimonial/avatar2.png',
     },
   },
@@ -387,12 +393,11 @@ export const TestimonialData = [
     id: 3,
     logoLight: '/images/testimonial/axeptio.svg',
     logoDark: '/images/testimonial/axeptio-dark.svg',
-    testimonial:
-      "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it looks like it, and it actually says nothing.",
+    testimonial: 'Профессиональный подход и отличное качество услуг. Помогли нам решить сложные технические задачи.',
     rating: 3,
     author: {
-      name: 'Cody Fisher',
-      designation: 'UI Designer',
+      name: 'Коди Фишер',
+      designation: 'UI Дизайнер',
       image: '/images/testimonial/avatar3.png',
     },
   },
@@ -400,12 +405,11 @@ export const TestimonialData = [
     id: 4,
     logoLight: '/images/testimonial/infinity.svg',
     logoDark: '/images/testimonial/infinity-dark.svg',
-    testimonial:
-      "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it looks like it, and it actually says nothing.",
+    testimonial: 'Отзывчивая команда и индивидуальный подход к каждому клиенту. Всегда находят оптимальные решения.',
     rating: 2,
     author: {
-      name: 'Albert Flores',
-      designation: 'Sr. Developer',
+      name: 'Альберт Флорес',
+      designation: 'Старший разработчик',
       image: '/images/testimonial/avatar4.png',
     },
   },
@@ -414,11 +418,11 @@ export const TestimonialData = [
     logoLight: '/images/testimonial/mfinity.svg',
     logoDark: '/images/testimonial/mfinity-dark.svg',
     testimonial:
-      "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it looks like it, and it actually says nothing.",
+      'Отличный сервис с профессиональным подходом к решению задач. Рекомендую всем, кто ищет надежного IT-партнера.',
     rating: 1,
     author: {
-      name: 'Floyed Miles',
-      designation: 'Junior Designer',
+      name: 'Михаил Федоров',
+      designation: 'Младший дизайнер',
       image: '/images/testimonial/avatar5.png',
     },
   },
@@ -427,11 +431,11 @@ export const TestimonialData = [
     logoLight: '/images/testimonial/coolchat.svg',
     logoDark: '/images/testimonial/coolchat-dark.svg',
     testimonial:
-      "Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. It's not Latin though it looks like it, and it actually says nothing.",
+      'Команда всегда оперативно реагирует на наши запросы и предлагает эффективные решения для оптимизации IT-инфраструктуры.',
     rating: 5,
     author: {
-      name: 'Bessie Cooper',
-      designation: 'Manager',
+      name: 'Елена Петрова',
+      designation: 'Менеджер',
       image: '/images/testimonial/avatar6.png',
     },
   },
@@ -461,45 +465,45 @@ export const PaymentRatingData = [
 export const CoreFeatures = [
   {
     id: 1,
-    title: 'Useful Features',
+    title: 'Полезные функции',
     iconLight: '/images/payment/invoice.svg',
     iconDark: '/images/payment/invoice-dark.svg',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    desc: 'Инновационные решения для оптимизации вашего бизнеса',
   },
   {
     id: 2,
-    title: 'Insights and Reports',
+    title: 'Аналитика и отчеты',
     iconLight: '/images/payment/insight.svg',
     iconDark: '/images/payment/insight-dark.svg',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    desc: 'Подробная аналитика и отчетность для принятия решений',
   },
   {
     id: 3,
-    title: 'Managing Inventory',
+    title: 'Управление ресурсами',
     iconLight: '/images/payment/inventory.svg',
     iconDark: '/images/payment/inventory-dark.svg',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    desc: 'Эффективное управление IT-ресурсами компании',
   },
   {
     id: 4,
-    title: 'Organized Expense',
+    title: 'Контроль расходов',
     iconLight: '/images/payment/expens.svg',
     iconDark: '/images/payment/expens-dark.svg',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    desc: 'Оптимизация и контроль IT-расходов',
   },
   {
     id: 5,
-    title: 'Organize Receipts',
+    title: 'Управление документами',
     iconLight: '/images/payment/receipts.svg',
     iconDark: '/images/payment/receipts-dark.svg',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    desc: 'Эффективная система управления документацией',
   },
   {
     id: 6,
-    title: 'Mobile App',
+    title: 'Мобильное приложение',
     iconLight: '/images/payment/app.svg',
     iconDark: '/images/payment/app-dark.svg',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    desc: 'Доступ к сервисам с мобильных устройств',
   },
 ]
 
@@ -508,22 +512,22 @@ export const PaymentFeaturesData = [
     id: 1,
     iconLight: '/images/payment/paymentFeature.svg',
     iconDark: '/images/payment/paymentFeature-dark.svg',
-    title: 'Useful Features',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    title: 'Удобные функции',
+    desc: 'Интуитивно понятный интерфейс и полезные инструменты',
   },
   {
     id: 2,
     iconLight: '/images/payment/payementSecure.svg',
     iconDark: '/images/payment/payementSecure-dark.svg',
-    title: '100% Secure',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    title: '100% Безопасность',
+    desc: 'Надежная защита данных и транзакций',
   },
   {
     id: 3,
     iconLight: '/images/payment/paymentCashback.svg',
     iconDark: '/images/payment/paymentCashback-dark.svg',
-    title: 'Cashback Program',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    title: 'Программа лояльности',
+    desc: 'Выгодные условия для постоянных клиентов',
   },
 ]
 
@@ -715,22 +719,22 @@ export const AboutFeaturesData = [
     id: 1,
     iconLight: '/images/about/passion.svg',
     iconDark: '/images/about/passion-dark.svg',
-    title: 'Our Passion',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    title: 'Наша страсть',
+    desc: 'Мы увлечены технологиями и инновациями',
   },
   {
     id: 2,
     iconLight: '/images/about/transparency.svg',
     iconDark: '/images/about/transparency-dark.svg',
-    title: 'Transparency',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    title: 'Прозрачность',
+    desc: 'Честные и открытые отношения с клиентами',
   },
   {
     id: 3,
     iconLight: '/images/about/mission.svg',
     iconDark: '/images/about/mission-dark.svg',
-    title: 'Our Mission',
-    desc: 'The prevailing view asumed lorem ipsum was born as nonsense text.',
+    title: 'Наша миссия',
+    desc: 'Помогать бизнесу расти через технологии',
   },
 ]
 
@@ -791,51 +795,51 @@ export const IntegrationData = [
 export const FooterData = {
   logo: '/images/logo-mini.png',
   logoDark: '/images/logo-mini.png',
-  footerText: 'Turpis tortor nunc sed amet et faucibus vitae morbi congue sed id mauris.',
-  copyright: `${new Date().getFullYear()} Komek Me. All Rights Reserved`,
+  footerText: 'Мы помогаем компаниям оптимизировать их IT-инфраструктуру и достигать максимальной эффективности.',
+  copyright: `${new Date().getFullYear()} Komek Me. Все права защищены`,
   email: 'admin@komek.me',
   phone: '+3 230 705 5448',
   expolre: [
     {
       id: 1,
-      name: 'About',
+      name: 'О нас',
       link: '/about',
     },
     {
       id: 2,
-      name: 'Services',
+      name: 'Услуги',
       link: '/services',
     },
     {
       id: 3,
-      name: 'Pricing',
+      name: 'Цены',
       link: '/price',
     },
     {
       id: 4,
-      name: "Faq's",
+      name: 'Вопросы',
       link: '/faq',
     },
     {
       id: 5,
-      name: 'Contact Us',
+      name: 'Контакты',
       link: '/contact',
     },
   ],
   resources: [
     {
       id: 1,
-      name: 'Blog',
+      name: 'Блог',
       link: '/blog',
     },
     {
       id: 2,
-      name: 'Log In',
+      name: 'Вход',
       link: '/login',
     },
     {
       id: 3,
-      name: 'Sign Up',
+      name: 'Регистрация',
       link: '/signup',
     },
   ],
