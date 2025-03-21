@@ -73,20 +73,6 @@ const ApiTester = () => {
     setLoading(true)
 
     try {
-      const requestOptions: RequestOptions = {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-
-      // Only include body for POST requests
-      if (method === 'POST') {
-        // Validate JSON for POST requests
-        JSON.parse(requestBody)
-        requestOptions.body = requestBody
-      }
-
       // For GET requests with JSON body, append it as query parameters
       let targetUrl = url
       if (method === 'GET' && requestBody.trim()) {
@@ -102,7 +88,23 @@ const ApiTester = () => {
         }
       }
 
-      const response = await fetch(targetUrl, requestOptions)
+      // Use our proxy API route
+      const proxyUrl = `/api/proxy?url=${encodeURIComponent(targetUrl)}`
+      const requestOptions: RequestOptions = {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+
+      // Only include body for POST requests
+      if (method === 'POST') {
+        // Validate JSON for POST requests
+        JSON.parse(requestBody)
+        requestOptions.body = requestBody
+      }
+
+      const response = await fetch(proxyUrl, requestOptions)
       const data: ApiResponse = await response.json()
       setResponse(data)
       toast.success('Request sent successfully!')
